@@ -2,976 +2,1019 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bhavin Thakur</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoopy Websites | Home</title>
+    <script src="https://kit.fontawesome.com/b5873bc089.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="./assets/site-icon.ico">
 
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
 
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+        /* == HEADER ============================================== */
 
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+        header {
+            display: flex;
+        }
+
+        #logo {
+            display: flex;
+            width: 20%;
+            margin-left: 15px;
+        }
+
+        #logo-image {
+            max-width: 30%;
+            object-fit: contain;
+        }
+
+        #logo-text {
+            max-width: 100%;
+            margin-right: 75px;
+            object-fit: contain;
+        }
+
+        header nav {
+            width: 80%;
+            min-height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            padding-right: 20px;
+        }
+
+        header button {
+            margin-left: 15px;
+            padding: 10px;
+            border-radius: 18px;
+            border: 2px solid red;
+            min-width: 120px;
+            background-color: transparent;
+            color: red;
+            font-size: 15px;
+            font-weight: 900;
+            text-transform: uppercase;
+            transition: 300ms ease-in-out;
+        }
+
+        header button:hover {
+            background-color: red;
+            color: white;
+            transform: translateY(10px);
+            cursor: pointer;
+        }
+
+        .whatsapp {
+            margin-left: 75px;
+            background-color: rgb(0, 0, 170);
+            color: white;
+            border: 2px solid rgb(0, 0, 170);
+        }
+
+        .whatsapp:hover {
+            background-color: transparent;
+            color: rgb(0, 0, 170);
+        }
+
+        .wp-logo {
+            margin: 0 5px;
+        }
+
+
+        /* == HERO IMAGE ============================================== */
+
+        #hero {
+            background-image: url(https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            min-height: 100vh;
+            background-position: center;
+        }
+
+
+        /* == CALL TO ACTION ============================================== */
+
+        .call-to-action {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.603);
+            min-height: inherit;
+            padding: 0 10%;
+        }
+
+        .call-to-action span {
+            min-width: 50%;
+        }
+
+        .form {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .call-to-action h1 {
+            font-size: 50px;
+            text-transform: capitalize;
+            color: rgb(135, 212, 235);
+            text-shadow: 0 0 30px;
+            transition: 400ms ease-in-out;
+            animation: cta-h1 10s infinite;
+        }
+
+        @keyframes cta-h1 {
+            0% {
+                color: rgb(135, 212, 235);
+                text-shadow: 0 0 30px;
+            }
+
+            45% {
+                color: rgb(135, 235, 140);
+                text-shadow: 0 0 30px;
+            }
+
+            90% {
+                color: rgb(235, 135, 135);
+                text-shadow: 0 0 30px;
+            }
+
+            100% {
+                color: rgb(135, 212, 235);
+                text-shadow: 0 0 30px;
+            }
+        }
+
+        .call-to-action p {
+            color: rgb(255, 255, 255);
+            text-shadow: 0 0 15px black;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .call-to-action button {
+            margin: 10px 0;
+            padding: 15px;
+            border: none;
+            max-width: 150px;
+            font-size: 15px;
+            text-transform: uppercase;
+            color: white;
+            font-weight: 900;
+            background-color: rgb(255, 115, 0);
+            border-radius: 5px;
+            transition: 250ms ease-in-out;
+        }
+
+        #plans {
+            margin-left: 10px;
+        }
+
+        .call-to-action button:hover {
+            cursor: pointer;
+            background-color: rgb(201, 90, 0);
+        }
+
+
+        /* == FORM ============================================== */
+
+        #form {
+            background-color: rgba(0, 0, 0, 0.384);
+            box-shadow: 0 0 5px 0 white;
+            border-radius: 20px;
+            min-width: 500px;
+            min-height: 400px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 150px;
+        }
+
+        #form p {
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        #form input,
+        textarea {
+            min-width: 320px;
+            min-height: 40px;
+            margin: 3px 0;
+            border-radius: 20px;
+            opacity: 50%;
+            padding-left: 15px;
+            color: black;
+            font-size: 15px;
+        }
+
+        #form textarea {
+            padding-top: 10px;
+        }
+
+        #form input::placeholder,
+        #form textarea::placeholder {
+            color: rgb(97, 97, 97);
+        }
+
+        #form button {
+            min-width: 100%;
+            min-height: 40px;
+            margin: 3px 0;
+            border-radius: 20px;
+            padding-left: 15px;
+            color: white;
+            font-weight: 900;
+        }
+
+        /* == ABOUT & SERVICES ============================================== */
+
+        .block {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .block h1 {
+            font-size: 50px;
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: rgb(0, 0, 158);
+        }
+
+        .block hr {
+            border-color: black;
+            width: 200px;
+            margin: 20px;
+        }
+
+        .block p {
+            padding-bottom: 30px 50px;
+            text-align: justify;
+        }
+
+        .services {
+            background-color: rgb(149, 142, 255);
+            margin: 0;
+        }
+
+        #cards {
+            display: flex;
+            min-width: 100%;
+        }
+
+        .card {
+            background-color: rgba(230, 129, 255, 0.438);
+            margin: auto;
+            width: 25%;
+            min-height: 400px;
+            border-radius: 25px;
+            box-shadow: 0 0 5px 0 purple;
+            transition: 400ms ease-in-out;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card:hover {
+            box-shadow: 0 0 25px 0 purple;
+            background-color: purple;
+            color: white;
+            border: none;
+        }
+
+        .sno {
+            height: 40px;
+            width: 40px;
+            font-size: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            color: transparent;
+            transition: inherit;
+        }
+
+        .card:hover .sno {
+            background-color: white;
+            color: purple;
+            font-size: 25px;
+            font-weight: 900;
+        }
+
+        .card h1 {
+            font-weight: 900;
+            font-size: 30px;
+            letter-spacing: 1px;
+            color: inherit;
+            text-align: center;
+            transition: inherit;
+        }
+
+        .card:hover h1 {
+            transform: scale(0.8);
+            color: white;
+        }
+
+        .card hr {
+            transition: inherit;
+        }
+
+        .card:hover hr {
+            border-color: white;
+        }
+
+        .price span {
+            margin: 10px;
+            font-weight: 700;
+            font-size: 25px;
+
+        }
+
+        #disc {
+            text-decoration: line-through;
+        }
+
+        .card-details ul {
+            list-style-position: inside;
+            list-style-type: '⚪';
+        }
+
+        .card-details ul li {
+            padding: 5px;
+            font-size: 18px;
+        }
+
+        .card button {
+            margin-top: 10px;
+            min-width: 60%;
+            min-height: 35px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            background-color: purple;
+            text-transform: uppercase;
+            font-weight: 900;
+            padding: 8px;
+            font-size: 20px;
+            transition: inherit;
+        }
+
+        .card:hover button {
+            background-color: white;
+            color: purple;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            transform: scale(1.1);
+        }
+
+
+        /* == CONTACT ============================================== */
+
+        .contact {
+            display: flex;
+            flex-direction: row;
+            background-color: rgba(0, 0, 0, 0.075);
+            padding: 30px 0;
+        }
+
+        .image,
+        .contact-form {
+            min-width: 45vw;
+            min-height: 420px;
+            padding: 20px;
+            margin: auto;
+        }
+
+        .image img {
+            object-fit: contain;
+            max-width: 100%;
+            border-radius: 50px 0;
+            box-shadow: 0 0 15px 0;
+        }
+
+        .contact-form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-form table {
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.582), rgba(0, 0, 0, 0.568)), url(./assets/image2.jpg);
+            background-size: contain;
+            border-radius: 50px 0;
+            box-shadow: 0 0 15px 0;
+            padding: 50px;
+            min-height: inherit;
+        }
+
+        .contact-form #form-heading {
+            text-align: center;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 900;
+            text-decoration: underline;
+            font-size: 30px;
+        }
+
+        .contact-form input[type=text],
+        .contact-form input[type=email],
+        .contact-form input[type=tel] {
+            min-width: 100%;
+            min-height: 35px;
+            margin: 5px 0;
+            padding-left: 10px;
+            border: none;
+            font-size: 15px;
+            border-radius: 5px 15px;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.301);
+        }
+
+        .contact-form input[type=checkbox] {
+            width: 18px;
+            height: 18px;
+        }
+
+        .contact-form input::placeholder {
+            color: rgb(224, 224, 224);
+        }
+
+        #subscribe {
+            color: white;
+            position: relative;
+            bottom: 3px;
+        }
+
+        .contact-form input[type=submit] {
+            min-width: 100%;
+            min-height: 35px;
+            margin: 5px 0;
+            padding-left: 10px;
+            border: none;
+            font-size: 18px;
+            letter-spacing: 3px;
+            font-weight: 900;
+            border-radius: 5px 15px;
+            background-color: black;
+            color: white;
+            transition: 300ms ease-in-out;
+        }
+
+        .contact-form input[type=submit]:hover {
+            transform: translateY(-4px);
+            cursor: pointer;
+        }
+
+
+        /* == FOOTER MENU ============================================== */
+
+        footer {
+            background-color: rgb(2, 0, 117);
+        }
+
+        .footer {
+            min-height: 500px;
+            display: flex;
+            flex-direction: row;
+            color: white;
+        }
+
+        .details {
+            max-width: 30%;
+            margin: auto;
+            font-size: 20px;
+        }
+
+        #footer-logo img {
+            margin-bottom: 15px;
+            box-shadow: 0 0 20px 0;
+            max-width: 400px;
+        }
+
+        .social-icons {
+            margin: 20px;
+
+        }
+
+        .social-icons span {
+            height: 30px;
+            width: 30px;
+            margin-right: 10px;
+            font-size: 25px;
+            border-radius: 50%;
+            padding: 5px;
+            background-color: white;
+            transition: 400ms ease-in-out;
+        }
+
+        #facebook {
+            color: blue;
+        }
+
+        #facebook:hover {
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+
+        #instagram {
+            color: rgb(185, 10, 147);
+        }
+
+        #instagram:hover {
+            background-color: rgb(185, 10, 147);
+            color: white;
+            cursor: pointer;
+        }
+
+        #linkedin {
+            color: rgb(0, 0, 150);
+        }
+
+        #linkedin:hover {
+            background-color: rgb(0, 0, 150);
+            color: white;
+            cursor: pointer;
+        }
+
+        #github {
+            color: black;
+        }
+
+        #github:hover {
+            background-color: black;
+            cursor: pointer;
+            color: white;
+        }
+
+        #mail {
+            color: rgb(112, 93, 194);
+        }
+
+        #mail:hover {
+            background-color: rgb(112, 93, 194);
+            color: white;
+            cursor: pointer;
+        }
+
+        .heading {
+            font-weight: 900;
+            text-decoration: underline;
+            font-size: 25px;
+            padding-bottom: 15px;
+        }
+
+        .details table tr td:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+
+        /* == FOOTER ============================================== */
+
+        #footer-hr {
+            width: 80%;
+            margin: auto;
+        }
+
+        #copyright {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(2, 0, 117);
+            color: white;
+            min-height: 75px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        #copyright a {
+            margin-left: 8px;
+            color: inherit;
+            text-decoration: none;
+            transition: 300ms ease-in-out;
+        }
+
+        #copyright a:hover {
+            color: skyblue;
+        }
+
+
+        /* == SIDELINE ============================================== */
+
+        #sideline {
+            background-color: white;
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            left: 0;
+            top: 200px;
+            font-size: 30px;
+            color: white;
+        }
+
+        #sideline div {
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 20%;
+            min-height: 80%;
+            transition: 300ms ease-in-out;
+        }
+
+        #sideline div:hover {
+            cursor: pointer;
+        }
+
+        #share-icon {
+            background-color: black;
+            margin-bottom: 5px;
+        }
+
+        #instagram-icon {
+            background-color: rgba(255, 0, 98, 0.395);
+        }
+
+        #instagram-icon:hover {
+            background-color: rgb(255, 0, 98);
+        }
+
+        #facebook-icon {
+            background-color: rgba(0, 0, 255, 0.395);
+        }
+
+        #facebook-icon:hover {
+            background-color: blue;
+        }
+
+        #link-icon {
+            background-color: rgba(128, 128, 128, 0.395);
+        }
+
+        #link-icon:hover {
+            background-color: grey;
+        }
+
+
+        /* == SCROLL TO TOP ============================================== */
+
+
+        :root {
+            scroll-behavior: smooth;
+        }
+
+        .stt {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            font-size: 50px;
+            opacity: 0.7;
+            transition: 200ms ease-in-out;
+        }
+
+        .stt:hover {
+            opacity: 1;
+            color: red;
+        }
+    </style>
+
 </head>
 
 <body>
 
-  <!--
-    - #MAIN
-  -->
+    <header>
+        <span id="logo">
+            <!-- <img id="logo-image" src="./assets/site-graphic.png"> -->
+            <img id="logo-text" src="./assets/zoopy_websites_logo.png" alt="Brand Logo">
+        </span>
+        <nav>
+            <a href=""><button class="menu">Home</button></a>
+            <a href="#about-section"><button class="menu">About Us</button></a>
+            <a href="#services-section"><button class="menu">Services</button></a>
+            <!-- <a href=""><button class="menu">Our Clients</button></a> -->
+            <a href="#contact-section"><button class="menu">Contact Us</button></a>
+            <a href="https://wa.me/919682632455/" target="_blank"><button class="whatsapp"><i
+                        class="wp-logo fa-brands fa-whatsapp"></i>Whatsapp</button></a>
+        </nav>
+    </header>
 
-  <main>
+    <main>
 
-    <!--
-      - #SIDEBAR
-    -->
+        <div id="hero">
+            <div class="call-to-action">
+                <span>
+                    <h1>get your own website at cheapest rates</h1>
+                    <p>We are always dedated to provide you with the best services that help you uplift your business /
+                        community / brand / company and get the most out of it. We here at [brand name] provide the
+                        cheapest website hosting, domain registration and management services available on the internet.
+                        Join the community now! Click below to know about the plans we offer.</p>
 
-    <aside class="sidebar" data-sidebar>
+                    <a href="#services-section"><button>See plans<i id="plans"
+                                class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+                </span>
+                <span class="form">
+                    <table id="form">
+                        <tr>
+                            <td>
+                                <p>Have a query? We'll call you!</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="" id="" placeholder="Your name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="tel" placeholder="Your contact number">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea name="" id="" cols="30" rows="7" placeholder="Your query here..."></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="">
+                                    <button>Call back</button>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </span>
+            </div>
+        </div>
 
-      <div class="sidebar-info">
+        <div id="about-section" class="block about">
+            <h1>About us</h1>
+            <hr>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima impedit, ipsum magni laborum consequatur
+                aut odit iusto eligendi pariatur ad. Vitae id quo laudantium sequi, debitis modi voluptas eos culpa
+                expedita dicta quia eveniet voluptatem placeat praesentium. Doloremque tenetur repellat deleniti?
+                Corporis explicabo dolorum maxime adipisci at odit. Minus eligendi, animi similique nisi consectetur
+                illum! Placeat eligendi itaque inventore, totam autem ad eveniet quisquam deserunt magni cum illo sequi,
+                a ducimus. Quos commodi debitis velit autem id quo consectetur reiciendis officia maxime, totam est iste
+                temporibus corrupti quae adipisci vitae dolorem veniam blanditiis laudantium praesentium consequatur
+                earum voluptate? Sequi dicta optio in libero quasi dolorem ipsum molestias quaerat unde deleniti eius
+                voluptate excepturi repellendus tenetur, commodi doloribus accusamus dolores! Mollitia quo autem
+                voluptatum aliquid cupiditate, ducimus consequatur reprehenderit temporibus, doloremque id nemo maiores
+                dolorum amet, necessitatibus labore modi fugiat illo? Nostrum harum sit error, praesentium fugiat natus
+                sint consectetur at ipsa vitae maiores, animi officia cumque. Ipsum, reprehenderit. Consequatur
+                dignissimos alias voluptatem explicabo quas consectetur nemo deleniti neque temporibus tempore eos, iste
+                similique provident repellat eligendi nihil, earum, voluptas possimus et! Quia hic et accusantium error
+                assumenda. Rem, ut beatae fugiat dicta alias cum, eaque in quia nemo, tempora aut.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit aut debitis explicabo accusamus eveniet
+                iste nobis voluptates id sequi aliquam magnam ipsa repudiandae accusantium, quo ullam dignissimos
+                reprehenderit saepe provident corrupti alias distinctio doloribus quia sed. Quam veniam possimus est
+                vitae dolores recusandae esse consequuntur illum, harum in corporis ducimus accusantium officia
+                voluptate cupiditate doloribus quae voluptates aliquam dignissimos asperiores dolor nostrum? Praesentium
+                ipsam vero laudantium accusamus quisquam modi necessitatibus, enim rem voluptate, impedit eaque
+                temporibus quo perferendis laboriosam totam dolorem reiciendis dolorum minus. Illum quo delectus
+                quibusdam rerum voluptates animi tempore omnis, facere at itaque nobis repudiandae odio porro incidunt
+                similique rem harum doloremque neque quod unde! Quisquam, quibusdam blanditiis pariatur, suscipit
+                deserunt aliquid laudantium qui soluta cum dignissimos officiis quasi consectetur illum doloremque ullam
+                nam! Officiis, nihil, impedit ipsa sequi error laborum doloribus dicta, iusto ratione doloremque hic!
+                Fugit aspernatur repellat veritatis possimus assumenda corrupti ea quod nulla cupiditate? Ipsam
+                veritatis unde ullam? Voluptas aliquam perferendis molestiae quibusdam? Dolores iusto harum blanditiis
+                quod quibusdam nobis sapiente porro ea rem reprehenderit! Numquam voluptate nihil labore nisi soluta aut
+                voluptatem hic odit voluptatibus, sequi praesentium vel corporis autem quo optio similique earum non
+                ullam minima nobis perferendis vitae eius consequatur! Magnam ex possimus voluptatum delectus! Similique
+                accusantium aliquid magni error pariatur debitis amet earum perferendis unde aliquam sed placeat, facere
+                repellendus tempore excepturi fugiat, at sunt enim molestias asperiores quae aut dolorum ab. Voluptate
+                eligendi aut excepturi doloribus quasi hic amet cum odit maxime pariatur sit, dolorem porro odio
+                dignissimos ab optio nulla blanditiis voluptatibus error temporibus corrupti velit tempora. Quos ipsam
+                nesciunt exercitationem alias ab veritatis ad ut et qui, dolore vitae. Aperiam sequi nulla assumenda
+                ullam et voluptate eligendi velit distinctio, ipsa in? Voluptatibus ratione saepe tempore, veniam odit
+                eveniet, a voluptatem quas nostrum dicta ullam! Quod, ut!</p>
+        </div>
 
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Bhavin Thakur" width="80">
-        </figure>
+        <div id="services-section" class="block services">
+            <h1>services</h1>
+            <hr>
 
-        <div class="info-content">
-          <h1 class="name" title="Bhavin Thakur">Bhavin Thakur</h1>
+            <div id="cards">
 
-          <p class="title">Digital Marketing Manager</p>
+                <div class="card">
+                    <div class="sno">1</div>
+                    <h1>Website building</h1>
+                    <hr>
+                    <div class="price">
+                        <!-- <span id="disc">$1799</span> -->
+                        <span>$1099</span>
+                    </div>
+                    <div class="card-details">
+                        <ul>
+                            <li> Personalized design</li>
+                            <li> High Quality Interface</li>
+                            <li> Fully Managed</li>
+                            <li> 24x7 hosting</li>
+                            <li> Free SSL certificate</li>
+                        </ul>
+                    </div>
+                    <button>buy plan</button>
+                </div>
+                <div class="card">
+                    <div class="sno">2</div>
+                    <h1>E-commerce & CMS Website</h1>
+                    <hr>
+                    <div class="price">
+                        <!-- <span id="disc">₹7999</span> -->
+                        <span>$1499</span>
+                    </div>
+                    <div class="card-details">
+                        <ul>
+                            <li> Easy product management</li>
+                            <li> Integrated Payment Gateway</li>
+                            <li> Secured Transactions</li>
+                            <li> 24x7 Hosting</li>
+                            <li> User friendly c-Panel</li>
+                        </ul>
+                    </div>
+                    <button>buy plan</button>
+                </div>
+                <div class="card">
+                    <div class="sno">3</div>
+                    <h1>Search Engine Optimization - SEO</h1>
+                    <hr>
+                    <div class="price">
+                        <!-- <span id="disc">₹4999</span> -->
+                        <span>$699</span>
+                    </div>
+                    <div class="card-details">
+                        <ul>
+                            <li> Top Google page rankings</li>
+                            <li> On-page and off-page SEO</li>
+                            <li> Image Optimization</li>
+                            <li> Image SEO</li>
+                            <li> Social Media Marketing</li>
+                        </ul>
+                    </div>
+                    <button>buy plan</button>
+                </div>
+
+            </div>
 
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+        <div id="contact-section" class="block">
+            <h1>contact</h1>
+            <hr>
 
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
+            <div class="contact">
 
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:bhavinthakur@proton.me" class="contact-link">bhavinthakur@proton.me</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+91968-263-2455" class="contact-link">+91 96826 32455</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">Feb 29, 2000</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Jammu, India</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://instagram.com/bhavin._.thakur/" target="_blank" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://facebook.com/thebhavinthakur/" target="_blank" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://github.com/developer1029" target="_blank" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://twitter.com/bhavinthakur29/" target="_blank" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/bhavinthakur/" target="_blank" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            I've worked as a content creator and a digital marketer in the past. I'm currently working as a website
-            manager for helping promote small and large businesses to explore online possibilities. I'm a newbie python
-            developer as well as a front end web designer and have made various projects for myself. I'm currently
-            exploring possibilities to showcase my skills as well as upgrade my current knowledge.
-          </p>
-
-          <p>
-            My job as a Digital Marketer is to build functional, user-friendly, attractive as well as easy to manage
-            websites. I make E-commerce websites also, helping offline stores to create their presence online as well as
-            increasing their business from the same. Moreover, I work as a freelance Search Engine Optimizer (SEO) and a
-            Social Media Optimizer (SMO) and have helped some local businesses to escalate their Social Media profiles
-            as well.
-          </p>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Wordpress: Web Designing</h4>
-
-                <p class="service-item-text">
-                  Professional website designs as per the client's request. Easy-to-manage backend.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Canva: Image Editing</h4>
-
-                <p class="service-item-text">
-                  Graphic designs with high-quality image results. Customization on client request.
-                </p>
-              </div>
-
-            </li>
-
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Content Writing</h4>
-
-                <p class="service-item-text">
-                  High quality search engine optimized content without plagiarism, content spinning or AI generation.
-                </p>
-              </div>
-
-            </li>
-
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Social Media</h4>
-
-                <p class="service-item-text">
-                  Social media accounts handling with Social Media Optimization (SMO) and Social Media Marketing (SMM).
-                </p>
-              </div>
-
-            </li>
-
-
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Projects</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-
-
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/pinnacle_logo.webp" alt="Pinnacle Overseas" width="60"
-                    data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Pinnacle Overseas</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    This is the official website for <b>The Pinnacle Overseas Education</b>, J&K's no.1 institute for
-                    IELTS, PTE, Spoken English and VISA consultation.<br><a href="https://thepinnacleoverseas.com/"
-                      target="_blank" style="color: cyan;">Visit Site</a>
-                  </p>
+                <div class="image">
+                    <img src="./assets/image2.jpg" alt="">
                 </div>
 
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/IITF.png" alt="ITF India" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>ITF India</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    This is the official website for the <b>Indian ITF Taekwon-Do Federation</b> (National Body of ITF
-                    Taekwondo).<br><a href="https://iitftkd.com/" target="_blank" style="color: cyan;">Visit Site</a>
-                  </p>
+                <div class="contact-form">
+                    <table>
+                        <tr>
+                            <td id="form-heading">contact form</td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" required placeholder="Full Name"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="email" required placeholder="Email"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="tel" placeholder="Phone no.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="" id="cb">
+                                <label id="subscribe" for="cb">Receive important updates through email</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="SEND">
+                            </td>
+                        </tr>
+                    </table>
                 </div>
 
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/yuraset_logo.png" alt="Yuraset" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Yuraset</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    I had built a website for my own interest on Blogspot to write blogs about Taekwon-Do that I've been
-                    playing since childhood. <br><a href="https://yuraset.blogspot.com/" target="_blank"
-                      style="color: cyan;">View Site</a>
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
             </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Bhavin Thakur</h4>
-
-              <time datetime="2023-04-06">Currently Managing</time>
-
-              <div data-modal-text>
-                <p>
-                  This is the official website for <b>The Pinnacle Overseas Education</b>, J&K's no.1 institute for
-                  IELTS, PTE, Spoken English and VISA consultation.<br><a href="https://thepinnacleoverseas.com/"
-                    target="_blank" style="color: cyan;">Visit Site</a>
-                </p>
-              </div>
-
-            </div>
-
-          </section>
 
         </div>
 
-      </article>
+    </main>
 
+    <footer>
 
+        <div class="block footer">
 
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+            <div class="details">
+                <div id="footer-logo">
+                    <img src="./assets/zoopy_websites_logo.png" alt="site logo">
+                </div>
+                <p>We are providing Web Designing & Development, SEO - On-page & Off-page, Digital Marketing, Social
+                    Media Marketing Services in Jammu, India.</p>
+                <div class="social-icons">
+                    <a href="" target="_blank">
+                        <span id="facebook"><i class="fa-brands fa-facebook"></i></span>
+                    </a>
+                    <a href="" target="_blank">
+                        <span id="instagram"><i class="fa-brands fa-instagram"></i></span>
+                    </a>
+                    <a href="" target="_blank">
+                        <span id="linkedin"><i class="fa-brands fa-linkedin"></i></span>
+                    </a>
+                    <a href="" target="_blank">
+                        <span id="github"><i class="fa-brands fa-github"></i></span>
+                    </a>
+                    <a href="" target="_blank">
+                        <span id="mail"><i class="fa-solid fa-envelope"></i></span>
+                    </a>
+                </div>
+            </div>
+            <div class="details">
+                <table>
+                    <tr>
+                        <p class="heading">DIGITAL MARKETING</p>
+                    </tr>
+                    <tr>
+                        <td>SEO Audit</td>
+                    </tr>
+                    <tr>
+                        <td>SEO Services</td>
+                    </tr>
+                    <tr>
+                        <td>SMM Services</td>
+                    </tr>
+                    <tr>
+                        <td>Email Marketing</td>
+                    </tr>
+                    <tr>
+                        <td>Content Writing</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="footer-links">
+                <table>
+                    <tr>
+                        <p class="heading">DESIGN & DEVELOPMENT</p>
+                    </tr>
+                    <tr>
+                        <td>Web Designing</td>
+                    </tr>
+                    <tr>
+                        <td>Web Development</td>
+                    </tr>
+                    <tr>
+                        <td>WordPress Development</td>
+                    </tr>
+                    <tr>
+                        <td>Dynamic Website</td>
+                    </tr>
+                    <tr>
+                        <td>Client management system (CMS)</td>
+                    </tr>
+                    <tr>
+                        <td>Web Redesigning</td>
+                    </tr>
+                </table>
             </div>
 
-            <h3 class="h3">Education</h3>
-          </div>
+        </div>
 
-          <ol class="timeline-list">
+        <hr id="footer-hr">
 
-            <li class="timeline-item">
+        <p id="copyright">
+            Copyright &copy; 2024 Brand Name | All rights reserved | <a href="#">Privacy policy</a>
+        </p>
 
-              <h4 class="h4 timeline-item-title">B.Sc Honours in Physics</h4>
+    </footer>
 
-              <span>Year of Completion: 2023</span>
 
-              <p class="timeline-text">
-                Government MAM PG College, Jammu
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Intermediate (12th) with PCM as Majors</h4>
-
-              <span>Year of Completion: 2017</span>
-
-              <p class="timeline-text">
-                Shaurya International School, Jammu
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Matriculation (10th) from CBSE</h4>
-
-              <span>Year of Completion: 2015</span>
-
-              <p class="timeline-text">
-                Army Public School Kaluchak, Jammu
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Digital Marketing Manager<p class="timeline-text"><a
-                    href="https://thepinnacleoverseas.com/" target="_blank"
-                    style="color: grey; text-decoration: underline;">The Pinnacle Overseas Education</a></p>
-              </h4>
-
-              <span>Nov 2023 - Present</span>
-
-              <p class="timeline-text">
-                Working as a manager in <b>10+</b> Domains including <b>Content Writing</b>, <b>SEO (Image, Frontend,
-                  Backend)</b>, <b>Content Editing</b>, <b>Proofreading</b>, <b>Website Administration</b>, <b>Theme
-                  handling</b>, <b>Publishing</b>, <b>Graphic Designing</b>, <b>Logo Designing</b>, <b>Email
-                  Handling</b>, <b>Social Media Handling</b>, etc.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Web Content Writer<p class="timeline-text"><a
-                    href="https://bugwill.com/" target="_blank" style="color: grey; text-decoration: underline;">Bugwill
-                    Private Limited</a></p>
-              </h4>
-
-              <span>Jan 2022 - Jul 2022</span>
-
-              <p class="timeline-text">
-                Worked as a content writer on different niche based websites like <b>Technology</b> and <b>Gardening</b>
-                handled by the company.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Team Leader<p class="timeline-text"><a href="https://ciplindia.co/"
-                    target="_blank" style="color: grey; text-decoration: underline;">Corporate Infocom Pvt. Ltd.</a></p>
-              </h4>
-
-              <span>Nov 2020 - Jan 2022</span>
-
-              <p class="timeline-text">
-                Started as a beginner in the marketing field and attained a position of <b>Team Leader</b> with a team
-                of over <b>65+</b> associates in different regions of India. Had to left the company for some
-                unfortunate reasons before formally assuming the role of the <b>Team Manager</b>. Also worked as an
-                <b>IT Trainer</b> and trained <b>80+</b> students through sessions. Successfully hosted <b>15+
-                  webinars</b>.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Advanced SEO</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Wordpress Management</h5>
-                <data value="90">95%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Managed Website Building</h5>
-                <data value="95">95%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 95%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Wordpress Designing</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web Domain Registration and Hosting</h5>
-                <data value="95">95%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 95%;"></div>
-              </div>
-
-            </li>
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Canva</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web Designing</h5>
-                <data value="65">65%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 65%;"></div>
-              </div>
-
-            </li>
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Image Editing</h5>
-                <data value="85">85%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 85%;"></div>
-              </div>
-
-            </li>
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Audio Transcription</h5>
-                <data value="75">75%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
-              </div>
-
-            </li>
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">ChatGPT / Google BARD</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Video Editing</h5>
-                <data value="75">75%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 75%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://niyukti.netlify.app/" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/jobPortal.png" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Job Portal</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="https://www.coursenator.com/" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/course.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Coursenator</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="https://subhamengine.github.io/pathfinder/" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/path.png" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Pathfinder</h3>
-
-                <p class="project-category">Web Developemt</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="https://github.com/subhamengine/Fashion-ecomerce" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/fashion.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fashion Ecomerce</h3>
-
-                <p class="project-category">Web Developemt</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-        </section>
-
-      </article>
-
+    <div id="sideline">
+        <div id="share-icon"><i class="fa-solid fa-share"></i></div>
+        <div id="instagram-icon"><i class="fa-brands fa-square-instagram"></i></div>
+        <div id="facebook-icon"><i class="fa-brands fa-square-facebook"></i></div>
+        <div id="link-icon"><i class="fa-solid fa-link"></i></div>
     </div>
 
-  </main>
 
+    <a href='#'><i class="stt fa-solid fa-square-caret-up"></i></a>
 
-
-
-
-
-  <!--
-    - Custom JS link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 
